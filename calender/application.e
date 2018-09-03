@@ -14,13 +14,13 @@ feature
 			calender: CALENDER
 			person: PERSON
 			e1, e2: ENTRY
-			t1, t2: TIME
+			t1, t2: DATE_TIME
 		do
 			create calender
 			create person.make("Kirill", "Innopolis", "k.fedoseev@innopolis.university", 1234567890)
-			create t1.make (10, 35, 0)
-			create t2.make (10, 35, 0)
-			
+			create t1.make (2018, 9, 3, 10, 35, 0)
+			create t2.make (2018, 9, 3, 10, 35, 0)
+
 			e1 := calender.create_entry(t1, person, "Subject", Void )
 			e2 := calender.create_entry(t2, person, "Subject", Void )
 			print(calender.get_owner_name (e1))

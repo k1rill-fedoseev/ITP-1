@@ -4,7 +4,7 @@ create
 	make
 
 feature
-	date: TIME
+	date: DATE_TIME
 	owner: PERSON
 	subject: STRING
 	place: detachable STRING
@@ -14,12 +14,12 @@ feature
 			subject := new_subject
 		end
 
-	set_date(new_date: TIME)
+	set_date(new_date: like date)
 		do
 			date := new_date
 		end
 
-	make(new_date: TIME; new_owner: PERSON; new_subject: STRING; new_place: detachable STRING)
+	make(new_date: like date; new_owner: PERSON; new_subject: STRING; new_place: detachable STRING)
 		do
 			date := new_date
 			owner := new_owner
